@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 20:13:47 by pabfajar          #+#    #+#             */
-/*   Updated: 2025/11/16 17:24:01 by pabfajar         ###   ########.fr       */
+/*   Updated: 2025/11/23 20:46:48 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
