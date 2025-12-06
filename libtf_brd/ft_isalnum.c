@@ -6,15 +6,15 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 20:43:48 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/11/23 20:49:19 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/06 20:59:06 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'z') || (c >= 'A' && c <= 'z') || (c >= 0 && c <= 9))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= 0 && c <= 9))
 	{
 		retunr (1);
 	}
