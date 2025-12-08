@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 21:55:24 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/07 20:18:12 by pfajardo         ###   ########.fr       */
+/*   Created: 2025/12/07 21:09:24 by pfajardo          #+#    #+#             */
+/*   Updated: 2025/12/07 21:14:22 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *source, size_t destsize)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	source_len;
-	size_t	i;
+	unsigned char	*str;
+	size_t			i;
 
-	source_len = ft_strlen(source);
-	if (destsize != '\0')
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
 	{
-		while (i < (destsize - 1) && source[i] != '\0')
-		{
-			dest[i] = source[i];
-			i++;
-		}
-		dest[i] = '\0';
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
+		i++;
 	}
-	return (source_len);
+	return (NULL);
 }

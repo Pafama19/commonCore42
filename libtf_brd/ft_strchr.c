@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 21:55:24 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/07 20:18:12 by pfajardo         ###   ########.fr       */
+/*   Created: 2025/12/07 20:02:53 by pfajardo          #+#    #+#             */
+/*   Updated: 2025/12/07 21:07:50 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *source, size_t destsize)
+char	*ft_strchr(const char *str, int c)
 {
-	size_t	source_len;
-	size_t	i;
+	int			i;
+	const char	*aux;
 
-	source_len = ft_strlen(source);
-	if (destsize != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		while (i < (destsize - 1) && source[i] != '\0')
+		if (str[i] == (char)c)
 		{
-			dest[i] = source[i];
-			i++;
+			aux = &str[i];
+			return ((char *)aux);
 		}
-		dest[i] = '\0';
+		i++;
 	}
-	return (source_len);
+	if (str[i] == (char)c)
+	{
+		aux = &str[i];
+		return ((char *)aux);
+	}
+	return (NULL);
 }

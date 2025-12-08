@@ -6,7 +6,7 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 20:58:09 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/06 20:56:00 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:16:43 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 	{
-		return(1);
+		return (1);
 	}
-	return(0);
+	return (0);
 }
