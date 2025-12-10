@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/07 21:46:49 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/09 16:13:49 by pfajardo         ###   ########.fr       */
+/*   Created: 2025/12/10 12:10:27 by pfajardo          #+#    #+#             */
+/*   Updated: 2025/12/10 12:32:10 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	i;
-	int	sign;
-	int	nbr;
+	char	*dest;
+	size_t	counter;
+	size_t	len_s1;
+	size_t	len_s2;
 
-	i = 0;
-	sign = 1;
-	nbr = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	counter = 0;
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	dest = malloc(len_s1 + len_s2 + 1);
+	if (!dest)
+		return (NULL);
+	while (s1[counter])
 	{
-		i++;
+		dest[counter] = s1[counter];
+		counter++;
 	}
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nbr = nbr * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)(nbr * sign));
+	ft_strlcat(dest, s2, len_s1 + len_s2 + 1);
+	return (dest);
 }

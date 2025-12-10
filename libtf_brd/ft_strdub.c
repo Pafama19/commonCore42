@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/07 21:46:49 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/09 16:13:49 by pfajardo         ###   ########.fr       */
+/*   Created: 2025/12/10 10:56:35 by pfajardo          #+#    #+#             */
+/*   Updated: 2025/12/10 11:23:55 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdub(const char *s1)
 {
-	size_t	i;
-	int	sign;
-	int	nbr;
+	char	*dest;
+	size_t	counter;
+	size_t	str_len;
 
-	i = 0;
-	sign = 1;
-	nbr = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	counter = 0;
+	str_len = ft_strlen(s1);
+	dest = malloc(str_len + 1);
+	if (!dest)
 	{
-		i++;
+		return (NULL);
 	}
-	if (str[i] == '-' || str[i] == '+')
+	while (s1[counter])
 	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
+		counter = s1[counter];
+		counter++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nbr = nbr * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)(nbr * sign));
+	dest[counter] = '\0';
+	return (dest);
 }

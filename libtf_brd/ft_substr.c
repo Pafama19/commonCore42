@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/07 21:46:49 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/09 16:13:49 by pfajardo         ###   ########.fr       */
+/*   Created: 2025/12/10 11:26:13 by pfajardo          #+#    #+#             */
+/*   Updated: 2025/12/10 12:03:04 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	int	sign;
-	int	nbr;
+	char	*s2;
+	size_t	len_s;
+	size_t	counter;
 
-	i = 0;
-	sign = 1;
-	nbr = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	counter = 0;
+	if (!s)
+		return (NULL);
+	len_s = ft_strlen(s);
+	if (start >= len_s)
+		return (ft_calloc(1, 1));
+	if (len_s - start < len)
+		len = len_s - start;
+	s2 = malloc(len + 1);
+	if (!s2)
+		return (NULL);
+	while (counter < len)
 	{
-		i++;
+		s2[counter] = s[start + counter];
+		counter++;
 	}
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nbr = nbr * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)(nbr * sign));
+	s2[counter] = '\0';
+	return (s2);
 }
