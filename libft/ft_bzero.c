@@ -6,11 +6,11 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:34:30 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/07 20:16:27 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:22:32 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t *n)
 {

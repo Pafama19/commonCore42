@@ -6,11 +6,11 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:55:24 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/07 20:18:12 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:25:01 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *source, size_t destsize)
 {

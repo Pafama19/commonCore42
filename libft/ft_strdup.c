@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdub.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 10:56:35 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/10 11:23:55 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:19:05 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdub(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*dest;
 	size_t	counter;
