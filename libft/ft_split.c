@@ -6,7 +6,7 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 18:45:58 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/13 18:54:05 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:55:45 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static char	*get_word(char const *s, char c, size_t	*ind)
 
 	while (s[*ind] && s[*ind] == c)
 		(*ind)++;
-	len = word_len(s + *ind, c);
+	len = len_word(s + *ind, c);
 	act_word = malloc(len * sizeof(char) + 1);
 	if (!act_word)
 		return (NULL);

@@ -6,13 +6,13 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 20:51:54 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/15 15:23:36 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:08:46 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_isprint(int c)
 {
 	if ((c >= 32 && c <= 126))
 	{

@@ -6,7 +6,7 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 19:00:35 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/13 19:39:37 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:57:11 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_itoa(int n)
 
 	nbr_digits = count_digits(n);
 	str = malloc(nbr_digits * sizeof(char) + 1);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (!str)
 		return (NULL);
 	str[nbr_digits] = '\0';

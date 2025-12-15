@@ -6,7 +6,7 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 17:37:56 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/11 19:46:03 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:54:49 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	left(char const *s1, char const *set)
 size_t	right(char const *s1, char const *set)
 {
 	size_t	countright;
-	size_t	lens1;
 
 	countright = ft_strlen(s1) - 1;
 	while (s1[countright] && ft_strchr(set, s1[countright]))

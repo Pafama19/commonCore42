@@ -6,7 +6,7 @@
 /*   By: pfajardo <pfajardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 21:21:56 by pfajardo          #+#    #+#             */
-/*   Updated: 2025/12/15 15:24:29 by pfajardo         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:57:49 by pfajardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		p[count] = (unsigned char)c;
 		count++;
 	}
+	return (b);
 }
